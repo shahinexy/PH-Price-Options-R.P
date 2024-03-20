@@ -14,14 +14,16 @@ const NavBar = () => {
   ];
 
   return (
-    <div>
-      <div onClick={() => setOpen(!open)} className="text-2xl cursor-pointer">
+    <div className="py-5">
+      <div onClick={() => setOpen(!open)} className="md:hidden text-2xl cursor-pointer">
         {
             open ? <MdCloseFullscreen /> : <RiMenu5Fill  />
         }
         
       </div>
-      <ul className="md:flex gap-10">
+      <ul className={`md:flex gap-10 absolute md:static text-white font-semibold bg-gray-600 px-5 w-full py-5 duration-1000
+      ${open ? 'top-14' : '-top-80'}
+      `}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
