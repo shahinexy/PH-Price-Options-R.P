@@ -1,10 +1,11 @@
+import DaisyNav from "./component/DaisyNav/DaisyNav"
 
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl text-red-500">Vite + React</h1>
+      <DaisyNav></DaisyNav>
     </>
   )
 }
